@@ -1,1 +1,91 @@
 
+body {
+    background-color: #0b1026;
+}
+body {
+    background-color: #0b1026;
+    background-image:
+        radial-gradient(1px 1px at 20% 30%, #ffffff, transparent),
+radial-gradient(1px 1px at 70% 60%, #ffffff, transparent),
+radial-gradient(2px 2px at 45% 80%, #65d9ff, transparent),
+radial-gradient(1px 1px at 85% 15%, #ffffff, transparent);
+
+    background-size: 300px 250px;
+    background-position: 0 0, 25px 35px;
+
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    color:cyan;
+    font-size: 42px;
+}
+
+.rocket {
+    display: inline-block;
+    animation: rocket-arrive 2s ease-out forwards;
+}
+
+@keyframes rocket-arrive {
+    from {
+        transform: translate(-100vw, 60vh);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+h1 {
+    text-shadow: 0 0 12px #65d9ff;
+}main {
+    text-align: center;
+    margin-top: 60px;
+}
+
+main h2 {
+    color: #65d9ff;
+    font-size: 32px;
+}
+
+main p {
+    font-size: 17px;
+    color: #c5d5e8;
+}main {
+    text-align: center;
+    margin-top: 60px;
+}
+
+main h2 {
+    color: #65d9ff;
+    font-size: 32px;
+}
+
+main p {
+    font-size: 17px;
+    color: #c5d5e8;
+}main {
+    text-align: center;
+    margin-top: 60px;
+}
+
+main h2 {
+    color: #65d9ff;
+    font-size: 32px;
+}
+
+main p {
+    font-size: 17px;
+    color: #c5d5e8;
+}#game-area {
+    width: 80%;
+    height: 350px;
+    margin: 40px auto;
+    background-color: #080d1c;
+    border: 2px solid #65d9ff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(101, 217, 255, 0.2);
+}
