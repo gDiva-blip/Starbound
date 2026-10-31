@@ -3,17 +3,27 @@ body {
     background-color: #0b1026;
 }
 body {
-    background-color: #0b1026;
-    background-image:
-        radial-gradient(1px 1px at 20% 30%, #ffffff, transparent),
-radial-gradient(1px 1px at 70% 60%, #ffffff, transparent),
-radial-gradient(2px 2px at 45% 80%, #65d9ff, transparent),
-radial-gradient(1px 1px at 85% 15%, #ffffff, transparent);
+  background-color: #050816;
 
-    background-size: 300px 250px;
+background-image:
+    radial-gradient(2px 2px at 10% 20%, white, transparent),
+    radial-gradient(3px 3px at 30% 70%, #b8eaff, transparent),
+    radial-gradient(2px 2px at 60% 15%, white, transparent),
+    radial-gradient(4px 4px at 80% 40%, #65d9ff, transparent),
+    radial-gradient(2px 2px at 90% 85%, white, transparent),
+    radial-gradient(3px 3px at 45% 45%, white, transparent),
+    radial-gradient(1px 1px at 15% 90%, white, transparent),
+    radial-gradient(2px 2px at 70% 75%, #b8eaff, transparent),
+    radial-gradient(1px 1px at 55% 95%, white, transparent),
+    radial-gradient(3px 3px at 95% 10%, white, transparent);
+
+background-size: 350px 300px;
+background-repeat: repeat;
+    
     background-position: 0 0, 25px 35px;
 
     color: white;
+    background-attachment: fixed;
 }
 
 h1 {
@@ -88,4 +98,35 @@ main p {
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 0 15px rgba(101, 217, 255, 0.2);
+}
+
+/* MAIN MENU BUTTONS */
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.menu-buttons button {
+    width: 230px;
+    padding: 14px 20px;
+    background: transparent;
+    color: #65d9ff;
+    border: 2px solid #65d9ff;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(101, 217, 255, 0.15);
+    transition: all 0.3s ease;
+}
+
+.menu-buttons button:hover {
+    background: #65d9ff;
+    color: #050816;
+    box-shadow: 0 0 20px rgba(101, 217, 255, 0.6);
+    transform: translateY(-3px);
 }

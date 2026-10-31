@@ -7,24 +7,66 @@
     <title>STARBOUND</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
-        <h1>STARBOUND <span class="rocket">🚀</span></h1>
-    </header>
-
     <main>
-        <h2>NASA Space Center</h2>
-        <p>Your journey beyond Earth begins here.</p>
 
-        <section id="game-area">
-            <p>This is where the game will be displayed.</p>
+        <!-- STARBOUND MAIN MENU -->
+        <section id="main-menu" class="screen active">
+
+            <div class="menu-content">
+
+<h1>STARBOUND <span class="rocket">🚀</span></h1>
+                 <p class="eyebrow">AN UNKNOWN UNIVERSE AWAITS</p>
+
+                <p class="tagline">
+                    Explore. Discover. Go beyond.
+                </p>
+
+                <nav class="menu-buttons">
+                    <button onclick="showScreen('mission-map')">
+                        PLAY
+                    </button>
+
+                    <button onclick="showScreen('mission-map')">
+                        MISSION MAP
+                    </button>
+
+                    <button onclick="showScreen('how-to-play')">
+                        HOW TO PLAY
+                    </button>
+
+                    <button onclick="showScreen('settings')">
+                        SETTINGS
+                    </button>
+                </nav>
+
+            </div>
+
         </section>
+
+
+        <!-- LEVEL ONE: NASA SPACE CENTRE -->
+        <section id="level-one" class="screen">
+
+            <h2>NASA Space Center</h2>
+
+            <p>Your journey beyond Earth begins here.</p>
+
+            <section id="game-area">
+                <p>This is where the game will be displayed.</p>
+            </section>
+
+            <button onclick="showScreen('mission-map')">
+                BACK TO MAP
+            </button>
+
+        </section>
+
     </main>
 
-    <footer>
-        <p>Explore. Discover. Go beyond.</p>
-    </footer>
+    <script src="script.js"></script>
 
 </body>
 </html>
