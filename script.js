@@ -25,3 +25,34 @@ function startLevel(levelNumber) {
 
   showScreen('game-screen');
 }
+
+function showScreen(screenId) {
+    document.querySelectorAll(".screen").forEach(screen => {
+        screen.classList.remove("active");
+    });
+
+    const target = document.getElementById(screenId);
+
+    if (target) {
+        target.classList.add("active");
+    }
+}
+
+let samples = 0;
+
+function collectSample() {
+    if (samples < 3) {
+        samples++;
+    }
+
+    document.getElementById("sample-count").textContent =
+        "Samples collected: " + samples + " / 3";
+
+    if (samples === 3) {
+        document.getElementById("mission-status").textContent =
+            "MISSION COMPLETE! You collected all 3 samples!";
+
+        document.getElementById("mission-status").style.color =
+            "#00ff99";
+    }
+}

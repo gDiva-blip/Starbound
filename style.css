@@ -130,3 +130,111 @@ main p {
     box-shadow: 0 0 20px rgba(101, 217, 255, 0.6);
     transform: translateY(-3px);
 }
+/* Star background */
+.starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+
+    background-image:
+        radial-gradient(2px 2px at 20px 30px, white, transparent),
+        radial-gradient(2px 2px at 100px 80px, #70eaff, transparent),
+        radial-gradient(1px 1px at 200px 150px, white, transparent),
+        radial-gradient(2px 2px at 300px 40px, white, transparent),
+        radial-gradient(1px 1px at 400px 200px, #70eaff, transparent);
+
+    background-size:
+        450px 300px,
+        450px 300px,
+        450px 300px,
+        450px 300px,
+        450px 300px;
+
+    animation: starMove 30s linear infinite,
+               twinkle 3s ease-in-out infinite alternate;
+}
+
+/* Moving stars */
+@keyframes starMove {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 450px 300px;
+    }
+}
+
+/* Twinkling effect */
+@keyframes twinkle {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+body > *:not(.starfield) {
+    position: relative;
+    z-index: 1;
+}
+
+/* SHOOTING STARS */
+
+.shooting-star {
+    position: fixed;
+    top: 15%;
+    left: 80%;
+    width: 120px;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #55eaff,
+        white
+    );
+
+    box-shadow: 0 0 10px #55eaff;
+
+    transform: rotate(45deg);
+
+    animation: shooting 4s ease-in-out infinite;
+
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes shooting {
+    0% {
+        transform: translate(0, 0) rotate(45deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    40% {
+        transform: translate(-500px, 500px)
+                   rotate(45deg);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
