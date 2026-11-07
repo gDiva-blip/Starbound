@@ -5,7 +5,7 @@ import * as THREE from 'three';
 // STARBOUND — FIRST-PERSON NASA ENVIRONMENT
 // =============================================
 
-const container = document.getElementById('three-container');
+const container = document.getElementById('game-area');
 
 if (!container) {
     throw new Error('STARBOUND: #three-container was not found.');
@@ -685,6 +685,7 @@ const observer = new ResizeObserver(resizeScene);
 observer.observe(container);
 
 window.addEventListener('resize', resizeScene);
-
-resizeScene();
-animate();
+window.startNASA = function() {
+    resizeScene();
+    animate();
+};

@@ -1,13 +1,4 @@
 // PART 1: switch between screens
-function showScreen(screenId) {
-  const screens = document.querySelectorAll('.screen');
-
-  screens.forEach(function (screen) {
-    screen.classList.remove('active');
-  });
-
-  document.getElementById(screenId).classList.add('active');
-}
 
 // PART 2: the game's memory
 const game = {
@@ -26,7 +17,7 @@ function startLevel(levelNumber) {
   showScreen('game-screen');
 }
 
-function showScreen(screenId) {
+window.showScreen = function(screenId) {
     document.querySelectorAll(".screen").forEach(screen => {
         screen.classList.remove("active");
     });
@@ -36,7 +27,7 @@ function showScreen(screenId) {
     if (target) {
         target.classList.add("active");
     }
-}
+};
 
 let samples = 0;
 
